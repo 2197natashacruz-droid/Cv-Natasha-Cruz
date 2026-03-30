@@ -194,7 +194,7 @@ a:hover {
 /* 💜 Barra de progreso */
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #d946ef, #a855f7);
+  background: linear-gradient (90 deg, #d946ef, #a855f7);
   border-radius: 10px;
   animation: loadBar 1.5s ease-in-out;
 }
@@ -228,12 +228,12 @@ header {
 .dark-toggle:hover {
   background: #d946ef;
   color: white;
-  transform: scale(1.1);
+  transform: scale (1.1);
 }
 
 /* 🌙 MODO OSCURO MANUAL */
 body.dark-mode {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background: linear-gradient (135 deg, #1a1a2e, #16213e);
   color: #f1f1f1;
 }
 
@@ -255,7 +255,7 @@ body.dark-mode .progress {
 }
 
 body.dark-mode .progress-bar {
-  background: linear-gradient(90deg, #c084fc, #a855f7);
+  background: linear-gradient (90 deg, #c084fc, #a855f7);
 }
 
 body.dark-mode .accordion-button {
