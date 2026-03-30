@@ -1,75 +1,268 @@
-/* ===== ESTILO AESTHETIC ROSA ===== */
-
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #ffc1dc);
-  color: #4a4a4a;
+  padding: 0;
 }
 
-.container {
+/* 🌈 Fondo general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a67faa, #f3a6ff);
+  color: #222;
+  padding: 20px;
+}
+
+/* 📄 Contenedor principal */
+.cv-container {
   max-width: 900px;
-  margin: 40px auto;
-  background: #fff0f6;
+  margin: 0 auto;
+  background: #ffffff;
   padding: 35px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
-  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
+/* ✨ Animación entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 👤 Header */
 header {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 h1 {
-  margin: 0;
-  font-size: 2.2rem;
-  color: #d63384;
+  font-size: 38px;
+  color: #ba3dbe;
+  margin-bottom: 10px;
 }
 
-.info {
-  font-size: 0.9rem;
-  color: #a64d79;
-  margin-top: 8px;
+header p {
+  font-size: 16px;
+  color: #555;
 }
 
+/* 📌 Secciones */
+section {
+  margin-bottom: 30px;
+}
+
+/* 💎 Títulos modernos */
 h2 {
-  color: #d63384;
-  border-bottom: 2px solid #ffc1dc;
-  padding-bottom: 5px;
-  margin-top: 25px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
+h2::after {
+  content: "";
+  width: px;
+  height: 3px;
+  background: #d946ef;
+  display: block;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+/* 📝 Texto */
 p {
   line-height: 1.6;
+  margin-bottom: 10px;
 }
 
+/* 🎯 Habilidades tipo badges */
 ul {
-  padding-left: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 li {
-  margin-bottom: 6px;
+  background: #7b188a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-.job {
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  background: rgba(255, 192, 203, 0.2);
+li:hover {
+  background: #d946ef;
+  color: white;
+  transform: scale(1.05);
 }
 
-.job strong {
-  color: #c2185b;
-}
-
-.job:hover {
-  transform: scale(1.02);
-  transition: 0.3s ease;
-  background: rgba(255, 182, 193, 0.35);
-}
-
-section {
+/* 📦 Accordion estilo PRO */
+.accordion-item {
+  border: none;
   margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: #f9d4ff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.accordion-button:hover {
+  background: #f3a6ff;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #e879f9;
+  color: #000;
+}
+
+.accordion-body {
+  background: #fdf4ff;
+}
+
+/* 🔗 Links */
+a {
+  color: #d946ef;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .cv-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  ul {
+    justify-content: center;
+  }
+}
+/* 👤 Foto perfil */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #f3a6ff;
+}
+
+/* 📌 Info */
+.info {
+  font-size: 14px;
+  color: #777;
+}
+
+/* 🎯 Contenedor de cada habilidad */
+.skill {
+  margin-bottom: 15px;
+}
+
+/* 📊 Texto */
+.skill p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* 🧱 Barra base */
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 💜 Barra de progreso */
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #d946ef, #a855f7);
+  border-radius: 10px;
+  animation: loadBar 1.5s ease-in-out;
+}
+
+/* ✨ Animación */
+@keyframes loadBar {
+  from {
+    width: 0;
+  }
+}
+
+header {
+  position: relative;
+}
+
+/* 🌙 Botón flotante */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f3a6ff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.dark-toggle:hover {
+  background: #d946ef;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* 🌙 MODO OSCURO MANUAL */
+body.dark-mode {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #f1f1f1;
+}
+
+body.dark-mode .cv-container {
+  background: #1e1e2f;
+  color: #f1f1f1;
+}
+
+body.dark-mode h1 {
+  color: #e879f9;
+}
+
+body.dark-mode .info {
+  color: #ccc;
+}
+
+body.dark-mode .progress {
+  background: #333;
+}
+
+body.dark-mode .progress-bar {
+  background: linear-gradient(90deg, #c084fc, #a855f7);
+}
+
+body.dark-mode .accordion-button {
+  background: #2a2a40;
+  color: #fff;
+}
+
+body.dark-mode .accordion-body {
+  background: #c4c4ec;
 }
